@@ -12,6 +12,21 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+I attempted to include a mock server to accept the mock API POST call.
+It wil run (along with the app) with the command:
+
+### `npm run dev`
+
+It fails to return a response (I'm logging the text version) because the file isn't being
+considered JSON, even though it's the same file format as what I've seen in examples on the web.
+
+The design is NOT pixel-perfect: I am quite used to creating pixel-perfect designs through 
+Adobe PhotoShop by working with the layers and extracting the info from there. Did it for years.
+I am apparently not completely clued in on how to do it properly with Zeplin. 
+
+But it is (in my opinion, if that counts) a very clean and close replication.
+
+
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.<br />
@@ -66,3 +81,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# eresonate
+Codeing Test

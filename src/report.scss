@@ -1,0 +1,262 @@
+@import "~bootstrap/scss/bootstrap";
+
+@mixin forLargeScreens($media) {
+  @media (min-width: $media/16+em) { @content; }
+}
+
+body {
+  height: 100%;
+  background-color: #191b1e;
+  font-family: Rubik;
+  font-size: 14px;
+}
+
+header {
+  //Properties for small screens   
+   position: relative;
+   width: 100%;
+   height: 64px;
+   background-color: #292c32;
+   z-index: 100;
+   @include forLargeScreens(768) {
+     //Properties for large screens
+      height: 80px;          
+   }
+  
+   .navbar {
+      height: 64px;
+      @include forLargeScreens(768) {
+        //Properties for large screens
+        height: 80px;          
+      } 
+   }
+
+   .navbar-right {
+      display: none;
+      @include forLargeScreens(768) {
+        //Properties for large screens
+        display: block;
+        position: absolute;
+        right: 125px;
+      } 
+   }
+
+   .Oval {
+    border-radius: 50%;
+    background-color: #357df7;    
+    width: 32px;
+    height: 32px;
+
+    @include forLargeScreens(768) {
+      width: 40px;
+      height: 40px;
+    }
+  }    
+}
+
+.main-content {
+
+  .Green-Background {
+
+    display: none;
+    @include forLargeScreens(768) {
+      display: block;
+      position: absolute;
+      top: 300px;
+      left: 0;
+      background: url('./assets/green.png') no-repeat center center;      
+      width: 519px;
+      height: 662px;
+      z-index: 99;
+    }
+  }
+
+  .Blue-Background {
+
+    display: none;
+    @include forLargeScreens(768) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -50px;
+      background: url('./assets/blue.png') no-repeat center center;      
+      width: 386px;
+      height: 472px;
+      z-index: 99;
+    } 
+  }
+
+  .Text-Center {
+    text-align: center;
+  }
+
+  .Form-Wrapper {
+      margin: 40px 0;
+
+      .Report-a-Problem {
+        font-family: Gotham;
+        font-size: 26px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: center;
+        margin-bottom: 30px;
+        color: var(--white);
+      }
+    
+      label {    
+        height: 21px;
+        opacity: 0.87;
+        font-family: Rubik;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: var(--white);
+      }
+    
+      .Shape-All-Soft-Rounded {    
+        opacity: 0.6;
+        border-radius: 8px;
+        border: solid 1px rgba(255, 255, 255, 0.6);
+        background-color: #191b1e;
+        color: white;
+        margin-bottom: 15px;
+      }
+    
+      .Input {
+        height: 40px; 
+        margin-bottom: 20px;       
+      }
+    
+      .Message {
+        height: 178px;
+      }
+
+      .Error-Message {
+        color: red;
+      }
+
+      .Submit-Button {
+        margin-top: 30px;
+        background: #5b9af8 url('./assets/default.png') no-repeat center center;
+        border-radius: 8px;
+        height: 40px;
+      }
+    
+      .success {
+        color: white;
+        background-color: green;
+        text-align: center;
+      }
+  }
+
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 258px;
+  background-color: #292c32;
+  color: white;
+  z-index: 100;
+  @include forLargeScreens(768) {
+    height: 194px;
+  }  
+
+  ul.no-style {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+
+  }
+
+  .buffer {
+    margin-top: 15px;
+  }
+
+  .links {
+      text-decoration: none;
+  }
+
+  .links-left {            
+    color: white;
+  }
+
+  .links-right {
+    color: white;
+    opacity: 0.6;
+  }
+
+  .social-media {      
+
+      .item {       
+        float: left;
+        margin: 30px 0 0;
+        width: 33%;
+      }
+
+      .icon {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+      }
+
+      .twitter {
+        background-image: url('./assets/twitter-square.png');
+      }    
+
+      .linked-in {
+        background-image: url('./assets/linkedin-square.png');
+      }    
+
+      .instagram {
+        background-image: url('./assets/instagram.png');
+      }    
+  }
+
+  .wrapper {
+
+      margin-top: 10px;      
+
+      .Shape-All-Soft-Rounded {
+        width: 165px;
+        height: 40px;
+        border-radius: 8px;
+        border: solid 1px rgb(255, 255, 255);
+      }
+
+      .State {        
+        padding: 5px 10px;
+        opacity: 0.6;       
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;            
+        text-align: left;
+
+        .Default {          
+          height: 21px;          
+          padding: 0 10px;
+          font-family: Rubik;
+          font-size: 14px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;          
+          color: #357df7;    
+        }
+  
+      }
+
+  
+  }
+
+
+}
